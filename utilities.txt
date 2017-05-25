@@ -1,0 +1,5 @@
+in index of storage we create a const of all reducers
+	(combineReducers) redux
+in App we create a const of store
+	(createStore) redux
+	provider from react-redux
