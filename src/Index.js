@@ -1,20 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
+/* eslint-disable no-undef */
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
 
-import App from './containers/App'
+import App from './containers/App';
 
-const render = Component => {
-  ReactDOM.render(
-    <div>
-      <Component />
-    </div>,
-    document.getElementById('root')
-  )
-}
+const render = (Component) => {
+	ReactDOM.render(
+		<AppContainer>
+			<Component />
+		</AppContainer>,
+    document.getElementById('root'),
+  );
+};
 
-render(App)
+render(App);
 
 if (module.hot) {
-  module.hot.accept('./containers/App', () => { render(App) })
+	module.hot.accept('./containers/App', () => { render(App); });
 }

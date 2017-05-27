@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import UserList from '../containers/UserList'
-
+import React, { Component } from 'react';
+import UserList from '../containers/UserList';
 
 
 export default class AppNew extends Component {
@@ -9,9 +8,9 @@ export default class AppNew extends Component {
 			<div>
 				<h2>Users List: </h2>
 				<UserList />
-				<hr/>
+				<hr />
 				<h2>User details:</h2>
 			</div>
-		)
+		);
 	}
 }
