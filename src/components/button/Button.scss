@@ -1,0 +1,17 @@
+.btn {
+	min-width: 50px;
+	padding: 5px 10px;
+	border: 1px solid #eee;
+}
+.btn-info {
+	background-color: lighten(blue, 15%);
+	@extend .btn;
+}
+.btn-warning{
+	@extend .btn;
+	background-color: darken(yellow, 5%);
+}
+.btn-danger{
+	@extend .btn;
+	background-color: darken(red, 7%);
+}
