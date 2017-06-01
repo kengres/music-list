@@ -1,9 +1,10 @@
-/* eslint-disable no-undef */
+/* eslint-disable no-undef, linebreak-style */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 
-import App from './containers/App';
+import App from './components/app/App';
 
 const render = (Component) => {
 	ReactDOM.render(
@@ -17,5 +18,5 @@ const render = (Component) => {
 render(App);
 
 if (module.hot) {
-	module.hot.accept('./containers/App', () => { render(App); });
+	module.hot.accept('./components/app/App', () => { render(App); });
 }
