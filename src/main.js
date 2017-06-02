@@ -4,7 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 
-import Index from './components/';
+// import Index from './components/';
+import App from './components/App';
 
 const render = (Component) => {
 	ReactDOM.render(
@@ -15,8 +16,10 @@ const render = (Component) => {
   );
 };
 
-render(Index);
+render(App);
 
 if (module.hot) {
-	module.hot.accept('./components/', () => { render(Index); });
+	module.hot.accept('./components/App', () => { 
+		render(App); 
+	});
 }

@@ -5,7 +5,7 @@ export default class Button extends Component {
 	
 	render() {
 		return (
-			<button className={this.props.color}>Button</button>
+			<button className={this.props.color}>{this.props.content}</button>
 		);
 	}
 }
