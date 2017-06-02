@@ -5,7 +5,7 @@ import css from './App.scss';
 import Button from '../button/Button';
 
 
-export default class App extends Component {
+class App extends Component {
 	render() {
 		return (
 			<div className="myDiv">
@@ -18,3 +18,5 @@ export default class App extends Component {
 		);
 	}
 }
+
+export default App;

@@ -4,7 +4,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 
-// import Index from './components/';
 import App from './components/App';
 
 const render = (Component) => {

@@ -1,6 +1,4 @@
-// export { default as App } from './App';
-// export { default as AppMobile } from './AppMobile';
-// export { default as AppTablet } from './AppTablet';
+/* eslint-disable eol-last */
 
 import App from './App';
 
