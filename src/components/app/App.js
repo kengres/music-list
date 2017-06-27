@@ -10,7 +10,7 @@ class App extends Component {
 		return (
 			<div className="myDiv">
 				<h1>Hello, world!</h1>
-				<p>Of course it needs to be pink</p>
+				<p>Of course it needs to be pink!</p>
 				<p><Button color="btn-info" content="Info" /></p>
 				<p><Button color="btn-warning" content="Warning" /></p>
 				<p><Button color="btn-danger" content="Danger" /></p>
