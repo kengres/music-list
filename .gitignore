@@ -1,7 +1,5 @@
-node_modules
-dist
-containers
-storage
-css
+node_modules/*
+dist/*
 .eslintcache
 utilities.txt
+.vscode
