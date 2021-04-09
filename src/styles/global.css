@@ -5,3 +5,21 @@ body {
   width: 800px;
   margin: 0 auto;
 }
+.nav {
+  display: flex;
+  align-items: center;
+  background-color: rgb(14, 14, 162);
+}
+.nav-item {
+  margin-right: 20px;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: all .3s ease-in-out;
+  color: #fff;
+}
+.nav-item:last-of-type {
+  margin-right: 0;
+}
+.nav-item:hover {
+  background-color: blue;
+}

@@ -1,22 +1,30 @@
-import React, { Component } from 'react';
-import Button from './components/button/Button';
+import React from 'react';
 import './styles/global.css';
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import { PageIndex } from './pages';
+import CounterPage from './pages/counter';
 
-class App extends Component {
-  render() {
-    return (
+
+const App = () => {
+  return (
+    <BrowserRouter>
       <div className="container">
-        <h1>Hello, world!</h1>
-        <p>Of course it needs to be pink</p>
-        <div className="buttons">
-          <Button type="default">Info Button</Button>
-          <Button type="info">Info Button</Button>
-          <Button type="warning">Warning Button</Button>
-          <Button type="danger">Danger Button</Button>
-        </div>
+        <nav className="nav">
+          <Link className="nav-item" to="/">Home</Link>
+          <Link className="nav-item" to="/counter">Counter</Link>
+        </nav>
+        
+        <Switch>
+          <Route path="/counter">
+            <CounterPage />
+          </Route>
+          <Route path="/">
+            <PageIndex />
+          </Route>
+        </Switch>
       </div>
-    );
-  }
+    </BrowserRouter>
+  );
 }
 
 export default App;
