@@ -1,0 +1,29 @@
+.btn {
+	min-width: 70px;
+	padding: 10px 14px;
+	border: none;
+  outline: none;
+  cursor: pointer;
+  transition: opacity .3s ease-out;
+}
+.btn:hover {
+  opacity: 0.6;
+}
+.btn:focus, .btn:active {
+  border: none;
+}
+.btn + .btn {
+  margin-left: 15px;
+}
+.btn--info {
+	background-color: rgb(51, 51, 224);
+  color: #fff;
+}
+.btn--warning{
+  background-color: rgb(175, 175, 13);
+  color: #333;
+}
+.btn--danger{
+  background-color: rgb(162, 37, 37);
+  color: #fff;
+}

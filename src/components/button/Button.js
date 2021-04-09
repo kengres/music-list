@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import css from './Button.scss';
+import React from 'react';
+import './Button.css';
 
-export default class Button extends Component {
-	
-	render() {
-		return (
-			<button className={this.props.color}>{this.props.content}</button>
-		);
-	}
+const Button = (props) => {
+  return (
+    <button className={`btn btn--${props.type}`}>
+      {props.children}
+    </button>
+  )
 }
+export default Button;
