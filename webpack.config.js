@@ -1,13 +1,12 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { HotModuleReplacementPlugin } = require("webpack")
 
 module.exports = {
   devtool: 'inline-source-map',
   mode: "development",
-  entry: {
-    main: './src/index.js'
-  },
+  entry: ['react-hot-loader/patch', "./src/index.js"],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: '[name].bundle.js'
@@ -34,14 +33,21 @@ module.exports = {
   },
   devServer: {
     contentBase: "./dist",
-    port: "8005",
-    open: false
+    port: 8005,
+    open: false,
+    hot: true,
   },
   plugins: [
+    new HotModuleReplacementPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Development',
       template: "./src/index.html"
     }),
-  ]
+  ],
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    },
+  },
 };
