@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../components/Button'
 
-export const PageIndex = () => {
+const PageIndex = () => {
   return (
     <div>
       <h1>Hello, world!</h1>
@@ -15,3 +15,4 @@ export const PageIndex = () => {
     </div>
   )
 }
+export default PageIndex

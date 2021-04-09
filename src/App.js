@@ -1,9 +1,13 @@
 import React from 'react';
 import './styles/global.css';
 import { BrowserRouter, NavLink, Route, Switch } from 'react-router-dom';
-import { PageIndex } from './pages';
-import CounterPage from './pages/counter';
-import AboutPage from './pages/about';
+import Loading from './components/Loading';
+import importedComponent from "react-imported-component";
+
+
+const Home = importedComponent(() => import(/* webpackChunkName:'home' */ './pages'), { LoadingComponent: Loading });
+const CounterPage = importedComponent(() => import(/* webpackChunkName:'counter' */ './pages/counter'), { LoadingComponent: Loading });
+const AboutPage = importedComponent(() => import(/* webpackChunkName:'about' */ './pages/about'), { LoadingComponent: Loading });
 
 
 const App = () => {
@@ -24,7 +28,7 @@ const App = () => {
             <CounterPage />
           </Route>
           <Route path="/">
-            <PageIndex />
+            <Home />
           </Route>
         </Switch>
       </div>
