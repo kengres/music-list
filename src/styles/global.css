@@ -23,3 +23,6 @@ body {
 .nav-item:hover {
   background-color: blue;
 }
+.active {
+  background-color: blue;
+}

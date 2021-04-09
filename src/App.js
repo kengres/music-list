@@ -1,8 +1,9 @@
 import React from 'react';
 import './styles/global.css';
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, NavLink, Route, Switch } from 'react-router-dom';
 import { PageIndex } from './pages';
 import CounterPage from './pages/counter';
+import AboutPage from './pages/about';
 
 
 const App = () => {
@@ -10,11 +11,15 @@ const App = () => {
     <BrowserRouter>
       <div className="container">
         <nav className="nav">
-          <Link className="nav-item" to="/">Home</Link>
-          <Link className="nav-item" to="/counter">Counter</Link>
+          <NavLink exact className="nav-item" to="/">Home</NavLink>
+          <NavLink className="nav-item" to="/counter">Counter</NavLink>
+          <NavLink className="nav-item" to="/about">About</NavLink>
         </nav>
         
         <Switch>
+          <Route path="/about">
+            <AboutPage />
+          </Route>
           <Route path="/counter">
             <CounterPage />
           </Route>
